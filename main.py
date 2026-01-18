@@ -2,7 +2,6 @@ import requests
 from rich import print
 from rich.markdown import Markdown
 
-
 city = input("Which city do you need the top restaurants for? ")
 
 context = "You are a travel guide who loves great cuisine"
@@ -52,7 +51,6 @@ def generate_itinerary(origin, destination, duration):
 
   print(itinerary)
 
-
 def welcome():
   """ Welcome message """
   print("[bold green]Welcome to the AI Travel Itinerary Planner[/bold green]")
@@ -61,7 +59,6 @@ def welcome():
 def credit():
   """ Credit message """
   print("[green]The AI Travel Itinerary Planner was built by [bold]Matt Delac[/bold], thank you for using it 💖[/green]")
-
 
 welcome()
 
