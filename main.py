@@ -17,8 +17,6 @@ restaurants = Markdown(response_data['answer'])
 print(restaurants)
 
 
-
-
 import requests
 from rich import print
 from rich.markdown import Markdown
