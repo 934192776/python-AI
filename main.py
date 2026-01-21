@@ -16,7 +16,6 @@ restaurants = Markdown(response_data['answer'])
 
 print(restaurants)
 
-
 import requests
 from rich import print
 from rich.markdown import Markdown
@@ -53,14 +52,12 @@ def welcome():
   """ Welcome message """
   print("[bold green]Welcome to the AI Travel Itinerary Planner[/bold green]")
 
-
 def credit():
   """ Credit message """
   print("[green]The AI Travel Itinerary Planner was built by [bold]Matt Delac[/bold], thank you for using it 💖[/green]")
 
 welcome()
 
-# User inputs
 origin = input("What city does your trip start from?\n")
 destination = input("What city is your trip going to?\m")
 duration = input("How many days will your trip last? (enter a number only, i.e 5)\n")
