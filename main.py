@@ -54,7 +54,7 @@ def welcome():
 
 def credit():
   """ Credit message """
-  print("[green]The AI Travel Itinerary Planner was built by [bold]Matt Delac[/bold], thank you for using it 💖[/green]")
+  print("[green]The AI Travel Itinerary Planner was built by [bold]Jing Hui[/bold], thank you for using it 💖[/green]")
 
 welcome()
 
