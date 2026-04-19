@@ -1,35 +1,12 @@
 import requests
-from rich import print
-from rich.markdown import Markdown
+# from rich import print
+# from rich.markdown import Markdown
 from http.server import BaseHTTPRequestHandler
 
-class handler(BaseHTTPRequestHandler):
-    def do_GET(self):
-        self.send_response(200)
-        self.send_header("Content-type","text/html")
-        self.end_headers()
-        self.wfile.write()
-city = input("Which city do you need the top restaurants for? ")
-
-context = "You are a travel guide who loves great cuisine"
-prompt = f"List the top 3 restaurants in {city}, make sure the output is well formatted, give a little description of the cuisine, only provide the restaurant list with some space in between each of them, add 1 relevant emoji per restaurant"
 api_key = "2046c535afeb092fo82f1d306d8a2b2t"
-api_url = f"https://api.shecodes.io/ai/v1/generate?prompt={prompt}&context={context}&key={api_key}"
 
-response = requests.get(api_url)
-response_data = response.json()
-
-restaurants = Markdown(response_data['answer'])
-
-print(restaurants)
-
-import requests
-from rich import print
-from rich.markdown import Markdown
 
 def display_current_weather(location):
-  """ Get the real time temperature and condition in a location """
-  api_key = "2046c535afeb092fo82f1d306d8a2b2t"
   api_url = f"https://api.shecodes.io/weather/v1/current?query={location}&key={api_key}&units=metric"
 
   response = requests.get(api_url)
@@ -51,7 +28,7 @@ def generate_itinerary(origin, destination, duration):
 
   response = requests.get(api_url)
   response_data = response.json()
-  itinerary = Markdown(response_data['answer'])
+  itinerary = response_data['answer']
 
   print(itinerary)
 
