@@ -1,7 +1,14 @@
 import requests
 from rich import print
 from rich.markdown import Markdown
+from http.server import BaseHTTPRequestHandler
 
+class handler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header("Content-type","text/html")
+        self.end_headers()
+        self.wfile.write()
 city = input("Which city do you need the top restaurants for? ")
 
 context = "You are a travel guide who loves great cuisine"
